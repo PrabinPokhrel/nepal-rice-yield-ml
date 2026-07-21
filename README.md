@@ -35,21 +35,16 @@ build_seasonal.py # aggregates monthly ERA5 into seasonal/phenological windows
 --- main analysis ---
 
 table1_validation.py # Table 1: all 4 models x full/detrended x 3 CV schemes
-classical_stats.py 
 
-# Mann-Kendall + Sen slope, ADF stationarity arc, VIF
-detrend_robustness.py 
+classical_stats.py # Mann-Kendall + Sen slope, ADF stationarity arc, VIF
 
-# blocked-CV climate R2 vs trend-removal method
-detrend_sensitivity.py 
+detrend_robustness.py # blocked-CV climate R2 vs trend-removal method
 
-# polynomial-degree sweep + spline-smoothing sweep
-seasonal_robustness.py 
+detrend_sensitivity.py # polynomial-degree sweep + spline-smoothing sweep
 
-# robustness gauntlet at phenological resolution
-shap_full.py 
+seasonal_robustness.py # robustness gauntlet at phenological resolution
 
-# SHAP interpretation of the full (trend-retained) RF
+shap_full.py # SHAP interpretation of the full (trend-retained) RF
 
 --- figures ---
 
