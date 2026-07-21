@@ -1,4 +1,4 @@
-# Nepal Rice Yield: Intensification vs. Climate (1963–2023)
+# Nepal Rice Yield: Intensification vs. Climate (1963-2023)
 
 Machine-learning analysis of Nepal's national rice-yield record, testing whether an
 apparent climate signal survives once the long-term agricultural-intensification trend
