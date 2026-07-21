@@ -1,0 +1,75 @@
+EXPLORATORY FINDINGS - figure01
+
+Rice yield trend: +33.3 kg/ha per year (r²=0.837, p<0.001)
+Temperature trend: +0.0206°C per year
+
+Correlations with rice yield:
+  tasmin (min temp): r=0.761  STRONGEST
+  tas_mean:          r=0.679
+  tasmax:            r=0.624
+
+Key observation: minimum temperature has strongest correlation.
+This matches Bangladesh paper (Roy and Uddin 2025).
+But mechanism may differ for Nepal:
+  - Bangladesh: warmer nights HURT yield (grain filling stress)
+  - Nepal: warmer nights may HELP yield (longer growing season,
+    less frost at altitude, earlier planting)
+This needs discussion in paper - important original insight.
+
+The colour pattern in scatter plots (red=old, green=recent):
+  - Old years (red): low temp, low yield - bottom left
+  - Recent years (green): high temp, high yield - top right
+  - Both yield and temperature increased together over time
+  - This means r values partly reflect the shared TIME trend
+    not purely a direct temperature-yield relationship
+  - This is called CONFOUNDING by time trend
+  - ML models can handle this better than simple correlation
+
+Figure 02: Rainfall findings
+
+Rainfall correlation with yield: r=0.259 (weak but positive)
+This is DIFFERENT from Bangladesh paper (negative/non-significant)
+
+Reason for Nepal being positive:
+- Nepal is mostly rain-fed agriculture (no major irrigation)
+- Terai plains depend on monsoon water directly
+- Mountain terrain drains excess water faster than flat Bangladesh
+- So more rain = more water = slightly higher yield in Nepal
+
+Key ranking of variables:
+1. tasmin (min temp):  r=0.761  strongest predictor
+2. tas_mean:           r=0.679
+3. tasmax:             r=0.624
+4. rainfall:           r=0.259  weakest
+
+Rainfall trend: +0.8 mm/year (p=0.596, NOT significant)
+Rainfall is NOT changing significantly over time.
+Temperature IS changing significantly.
+This means climate change is affecting Nepal rice
+primarily through temperature, not rainfall changes.
+
+CRITICAL FINDING - Spurious correlation explained:
+
+tasmin r=0.761 with yield BUT only 3.0% importance detrended.
+Why: both tasmin and yield increased over time (shared trend).
+This is spurious correlation, not direct causation.
+
+Correct interpretation:
+- Long-term warming trend correlates with yield increase
+- But year-to-year temperature variation does NOT predict
+  year-to-year yield variation
+- Rainfall (14.4%) and fertilizer (48.5%) drive annual variation
+- Technology adoption drives the long-term trend
+
+This distinction is critical for the paper.
+Must not overstate temperature-yield relationship.
+Panel E interpretation (my own words):
+Phosphate fertilizer is most important for year-to-year variation.
+Rainfall is most important climate variable.
+Temperature variables are less important than rainfall.
+Humidity is least important.
+
+This means: in years when phosphate supply was good AND
+rainfall was adequate, yield was above trend.
+In years when phosphate was scarce OR rainfall was poor,
+yield fell below trend.

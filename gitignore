@@ -1,0 +1,26 @@
+# virtual environment
+venv/
+.venv/
+env/
+
+# python caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# notebooks
+.ipynb_checkpoints/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# large / raw intermediates (keep the two derived CSVs tracked)
+*.tmp
+*.log
+
+# outputs you may not want to version (uncomment if desired)
+# figures/
+# *.docx
