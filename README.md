@@ -24,6 +24,8 @@ figures in the manuscript.
 
 data/
 nepal_rice_climate.csv # 60 obs, 1963–2023: yield + 11 predictors + year
+
+
 nepal_rice_seasonal.csv # monsoon growing-season / phenological-window aggregates
 
 --- data preparation ---
@@ -33,30 +35,66 @@ build_seasonal.py # aggregates monthly ERA5 into seasonal/phenological windows
 --- main analysis ---
 
 table1_validation.py # Table 1: all 4 models x full/detrended x 3 CV schemes
-classical_stats.py # Mann-Kendall + Sen slope, ADF stationarity arc, VIF
-detrend_robustness.py # blocked-CV climate R2 vs trend-removal method
-detrend_sensitivity.py # polynomial-degree sweep + spline-smoothing sweep
-seasonal_robustness.py # robustness gauntlet at phenological resolution
-shap_full.py # SHAP interpretation of the full (trend-retained) RF
+classical_stats.py 
+
+# Mann-Kendall + Sen slope, ADF stationarity arc, VIF
+detrend_robustness.py 
+
+# blocked-CV climate R2 vs trend-removal method
+detrend_sensitivity.py 
+
+# polynomial-degree sweep + spline-smoothing sweep
+seasonal_robustness.py 
+
+# robustness gauntlet at phenological resolution
+shap_full.py 
+
+# SHAP interpretation of the full (trend-retained) RF
 
 --- figures ---
 
 make_conceptual.py # Figure 1: conceptual trend-confounding schematic
+
+
 figure01_explore.py # Figure 2: yield and temperature trends, scatter plots
+
+
 figure02_rainfall.py # Figure 3: rainfall trend and rainfall-yield relationship
+
+
 figure03_ml_results.py # Figure 4: model performance, importances, deviations
+
+
 figure04_correlation.py # Figure 5: correlation matrix of yield and predictors
+
+
 figure05_projection.py # Figure 6: partial dependence within observed range
+
+
 figure06_detrend_robustness.py# Figure 7: detrend-robustness centrepiece
 
 figures/
 00_conceptual.png # Figure 1
+
+
 01_exploratory.png # Figure 2
+
+
 02_rainfall.png # Figure 3
+
+
 03_ml_results.png # Figure 4
+
+
 04_correlation_matrix.png # Figure 5
+
+
 05_partial_dependence.png # Figure 6
+
+
 06_detrend_robustness.png # Figure 7
+
+
 07_shap_full_summary.png # Supplementary Figure S1
 
 requirements.txt
@@ -115,11 +153,23 @@ python shap_full.py
 
 # Step 7 - figures
 python make_conceptual.py
+
+
 python figure01_explore.py
+
+
 python figure02_rainfall.py
+
+
 python figure03_ml_results.py
+
+
 python figure04_correlation.py
+
+
 python figure05_projection.py
+
+
 python figure06_detrend_robustness.py
 ```
 
