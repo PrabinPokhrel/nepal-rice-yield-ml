@@ -1,3 +1,4 @@
+python 3.14.3
 scikit-learn==1.9.0
 xgboost==3.3.0
 pandas==3.0.3
